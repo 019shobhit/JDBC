@@ -20,13 +20,13 @@ public class Doctor {
                 ResultSet rs = pst.executeQuery();
                 System.out.println("Doctors: ");
                 System.out.println("+------------+------------------------+--------------------+");
-                System.out.println("| Doctor ID |       Doctor Name       |   Specialization   |");
+                System.out.println("| Doctor ID  | Doctor Name            | Specialization     |");
                 System.out.println("+------------+------------------------+--------------------+");
                 while(rs.next()){
                     int id = rs.getInt("id");
                     String name = rs.getString("name");
                     String specialization = rs.getString("specialization");
-                    System.out.printf("|%-12s|%-24s|%-20s|",id,name,specialization );
+                    System.out.printf("| %-10s | %-22s | %-18s |\n",id,name,specialization );
                     System.out.println("+------------+------------------------+--------------------+");
                 }
             }
